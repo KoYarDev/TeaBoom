@@ -1,0 +1,92 @@
+@import "reset.css";
+@import "vars.css";
+@import "fonts.css";
+@import "header.css";
+@import "product.css";
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/thumbs";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #fbfbfb;
+    font-family: var(--font-base);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--text);
+
+    &.--menu-open {
+        overflow: hidden;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+    &:hover {
+        color: var(--hover);
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+svg {
+    display: block;
+}
+
+input {
+    font-family: inherit;
+    color: inherit;
+
+    &::placeholder {
+        font-family: inherit;
+        color: inherit;
+    }
+}
+
+.container {
+    max-width: 75rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+
+    &.--visible {
+        display: block;
+    }
+}

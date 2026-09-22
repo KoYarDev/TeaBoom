@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeaBoom</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="/scripts/swiper.js" type="module"></script>
+  <script src="/scripts/main.js" type="module"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__brand">
+          <a href="https://teaboom.ru/product/ananasovij-ulun">
+            <img class="header__logo" src="/content-images/logo.png" alt="logo">
+          </a>
+          <div class="header__text">
+            <div class="header__title">Чайный Бум</div>
+            <div class="header__slogan">Интернет-магазин чая и посуды</div>
+          </div>
+        </div>
+        <div class="header__contacts">
+          <div class="header__contacts-inner">
+            <div class="header__phone">
+              <svg width="16" height="16">
+                <use href="/sprites.svg#phone"></use>
+              </svg>
+              <a href="tel:+74951201551" class="header__phone-link">+7 (495) 120-15-51</a>
+            </div>
+            <div class="header__mail">
+              <svg width="16" height="16">
+                <use href="/sprites.svg#mail"></use>
+              </svg>
+              <a href="mailto:info@teaboom.ru" class="header__mail-link">info@teaboom.ru</a>
+            </div>
+          </div>
+          <div class="header__working-hours">
+            пн - пт с 10:00 до 19:00 <br> сб - вс с 12:00 до 16:00
+          </div>
+        </div>
+        <div class="header__controls">
+          <div class="header__search">
+            <button class="header__search-btn">
+              <svg width="20" height="20">
+                <use href="/sprites.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header__shop-cart">
+            <a class="header__shop-link" href="/cart">
+              <svg width="25" height="25">
+                <use href="/sprites.svg#cart"></use>
+              </svg>
+              <span class="header__shop-amount">0</span>
+            </a>
+          </div>
+          <div class="header__login">
+            <a class="header__login-link" href="/login">
+              <svg width="25" height="25">
+                <use href="/sprites.svg#login"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__nav-mobile">
+            <button class="nav-mobile-btn">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Главная</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Каталог</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Подарки</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Прайслист</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Отзывы</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <form role="search" action="/search" method="GET" class="menu__search">
+          <label for="site-search" class="sr-only">Поиск по каталогу</label>
+          <div class="menu__search-wrapper">
+            <input class="menu__input" id="site-search" name="q" autocomplete="off" type="text"
+              placeholder="Начните вводить название товара...">
+            <div class="menu__submit">
+              <button class="menu__submit-btn" type="submit">
+                <svg width="20" height="20">
+                  <use href="/sprites.svg#search"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <div class="product-main">
+          <div class="product-container">
+            <nav class="breadcrumbs" aria-label="breadcrumbs">
+              <ul class="breadcrumbs-container">
+                <li><a href="#">Начало</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Улун</a></li>
+                <li><a href="#">Ароматизированный улун</a></li>
+                <li><a href="#">Китайский ароматизированный улун</a></li>
+                <li><a href="#">Китайский светлый ароматизированный улун</a></li>
+                <li><a href="#">Ананасовый улун</a></li>
+              </ul>
+            </nav>
+
+            <h1 class="product-title">Ананасовый улун</h1>
+
+            <div class="product-card">
+              <div class="product-card__main">
+                <div class="product-card__top">
+                  <div class="product-card__reviews">
+                    <a href="#" id="scrollToReviews" class="product-card__reviews-link">
+                      <svg width="28" height="28">
+                        <use href="/sprites.svg#reviews"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="product-card__favorite-btn">
+                    <a href="#" data-action="/my-favorite-products/add?ajax" data-tooltip="Добавить в избранное"
+                      id="favoriteBtn" class="add_remove_favorite" title="Добавить в избранное">
+                      <svg width="28" height="28">
+                        <use href="/sprites.svg#heart"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-card swiper product-card__gallery-main">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a class="product-card__main-img" href="/">
+                        <img src="/content-images/teaboom-card-lg.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="product-card__main-img" href="/">
+                        <img src="/content-images/teaboom-card-lg-2.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="product-card__main-img" href="/">
+                        <img src="/content-images/teaboom-card-lg-3.jpg" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper product-card__gallery-thumbs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="/content-images/teaboom-card-sm.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/content-images/teaboom-card-sm-2.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/content-images/teaboom-card-sm-3.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="product-info">
+                <div class="product-info__container">
+
+                  <p class="product-info__desc">Светлый Фуцзяньский улун с ароматом
+                    свежего спелого ананаса.
+                    Изумрудный скрученный лист с гармоничным цветочным и фруктовым послевкусием.Настой прозрачный, светло-янтарного цвета. Классическая нота светлого
+                    фуцзяньского улуна переплетается c яркой ананасовой нотой.
+                  </p>
+
+                  <div class="product-variants">
+                    <div class="product-variants__list">
+                      <div class="product-variants__info">
+                        <span class="product-variants__sku">арт: 01306</span>
+                        <div class="product-variants__price">
+                          <span class="--old">349.2 ₽</span>
+                          <span class="">326.4 ₽</span>
+                        </div>
+                      </div>
+
+                      <div class="product-variants__btns">
+                        <div class="product-weight__toggle">
+                          <button class="product-weight__btn">
+                            <span>100 г</span>
+                            <svg height="20" width="20">
+                              <use href="/sprites.svg#shevron-down"></use>
+                            </svg>
+                          </button>
+                          <div class="product-weight__list">
+                            <button class="product-weight__item">
+                              <span>100 г</span>
+                            </button>
+                            <button class="product-weight__item">
+                              <span>500 г</span>
+                            </button>
+                            <button class="product-weight__item">
+                              <span>1000 г</span>
+                            </button>
+                            <button class="product-weight__item">
+                              <span>5000 г</span>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="product-variants__action">
+                          <div class="product-variants__stepper" id="cartStepper">
+                            <button type="button" class="product-variants__cart-btn" id="btnAddToCart"
+                              aria-label="Добавить в корзину">
+                              <svg width="20" height="20" aria-hidden="true" class="stepper-icon">
+                                <use href="/sprites.svg#cart"></use>
+                              </svg>
+                              <span class="product-variants__cart-text">в корзину</span>
+                            </button>
+                            <div class="product-variants__counter product-variants__counter_hidden" id="stepperControls"
+                              role="group" aria-label="Количество товара">
+                              <button type="button" class="product-variants__counter-btn" id="btnDecrement"
+                                aria-label="Уменьшить количество">
+                                <svg width="16" height="16">
+                                  <use href="/sprites.svg#minus"></use>
+                                </svg>
+                              </button>
+                              <span class="product-variants__count-val" id="stepperCount">1 шт.</span>
+                              <button type="button" class="product-variants__counter-btn" id="btnIncrement"
+                                aria-label="Увеличить количество">
+                                <svg width="16" height="16">
+                                  <use href="/sprites.svg#plus">
+                                  </use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-related__slider">
+                <h5 class="product-related__slider-title">Похожие и сопутствующие товары:
+                </h5>
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="product-related__item">
+                        <a class="product-related__link" href="/product/ananasovij-ulun-tajvan">
+                          <img class="product-related__img" src="/content-images/ananasovij-ulun.jpg" alt="">
+                          <div class="product-related__text">Ананасовый улун (Тайвань)</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-related__item">
+                        <a class="product-related__link" href="/product/molochnyj-ulun-tajvani-1">
+                          <img class="product-related__img" src="/content-images/molochnyj-ulun-tajvani-1.jpg" alt="">
+                          <div class="product-related__text">Молочный улун (Тайвань)</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-related__item">
+                        <a class="product-related__link" href="/product/persikovyj-ulun-tajvani">
+                          <img class="product-related__img" src="/content-images/persikovyj-ulun-tajvani.jpg" alt="">
+                          <div class="product-related__text">Перскийвый улун (Тайвань)
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-related__item">
+                        <a class="product-related__link" href="/product/ananasovij-ulun-tajvan">
+                          <img class="product-related__img" src="/content-images/ananasovij-ulun.jpg" alt="">
+                          <div class="product-related__text">Ананасовый улун (Тайвань)</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-related__item">
+                        <a class="product-related__link" href="/product/molochnyj-ulun-tajvani-1">
+                          <img class="product-related__img" src="/content-images/molochnyj-ulun-tajvani-1.jpg" alt="">
+                          <div class="product-related__text">Молочный улун (Тайвань)</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-related__item">
+                        <a class="product-related__link" href="/product/persikovyj-ulun-tajvani">
+                          <img class="product-related__img" src="/content-images/persikovyj-ulun-tajvani.jpg" alt="">
+                          <div class="product-related__text">Перскийвый улун (Тайвань)
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="sidebar">
+            <nav class="category-nav sidebar__section">
+              <h2 class="category-nav__header">
+                <a href="/category">Категории</a>
+              </h2>
+              <div class="category-nav__body">
+                <ul class="category-nav__list">
+                  <li class="category-nav__item">
+                    <a href="/category-podarki" class="category-nav__link">Подарки</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-matcha" class="category-nav__link">Матча</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-chernyy_tea" class="category-nav__link">Черный чай</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-chaj-zelyonyj-s-chernym-aromatizirovannyj" class="category-nav__link">Чай
+                      зелёный с черным ароматизированный</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-zelenyj-chaj" class="category-nav__link">Зеленый чай</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-krasnyj-chaj" class="category-nav__link">Красный чай</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-belyj-chaj" class="category-nav__link">Белый чай</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-zheltyj-chaj" class="category-nav__link">Желтый чай</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-ulun" class="category-nav__link category-nav__link_current">Улун</a>
+                  </li>
+                  <li class="category-nav__item">
+                    <a href="/category-puer" class="category-nav__link">Пуэр</a>
+                  </li>
+
+
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-dobavki-k-chayu" class="category-nav__link">Добавки к чаю</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-fruktovyj-chaj" class="category-nav__link">Фруктовый чай</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-mate-i-lapacho" class="category-nav__link">Мате и лапачо</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="category-rojbush-hanibush-i-karkade-gibiskus" class="category-nav__link">Ройбуш,
+                      ханибуш и
+                      каркаде (гибискус)</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-svyazannyj-chaj" class="category-nav__link">Связанный чай</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-kofe" class="category-nav__link">Кофе</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-siropy-i-toppingi" class="category-nav__link">Сиропы и топпинги</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-sladosti" class="category-nav__link">Сладости</a>
+                  </li>
+                  <li class="category-nav__item category-nav__item_tail category-nav__item_hidden">
+                    <a href="/category-posuda-i-aksessuary" class="category-nav__link">Посуда и аксессуары</a>
+                  </li>
+
+                  <li class="category-nav__item">
+                    <button type="button" class="category-nav__btn">
+                      <span class="category-nav__toggle-text">еще категории</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <nav class="category-recent sidebar__section">
+              <h3 class="category-recent__header">
+                Вы смотрели
+              </h3>
+              <div class="category-recent__body">
+                <ul class="category-recent__list">
+                  <li class="category-recent__item">
+                    <a href="/product/ananasovij-ulun" class="category-recent__link">
+                      <img src="/content-images/ananasovij-ulun.jpg" alt="">
+                    </a>
+                    <h4 class="category-recent__text">
+                      Ананасовый улун
+                    </h4>
+                  </li>
+                  <li class="category-recent__item">
+                    <a href="/product/krasnaya-matcha-svekla" class="category-recent__link">
+                      <img src="/content-images/krasnaya-matcha-svekla.jpg" alt="">
+                    </a>
+                    <h4 class="category-recent__text">
+                      Красная матча
+                    </h4>
+                  </li>
+                  <li class="category-recent__item">
+                    <a href="/product/molochnyj-ulun-tajvani-1" class="category-recent__link">
+                      <img src="/content-images/molochnyj-ulun-tajvani-1.jpg" alt="">
+                    </a>
+                    <h4 class="category-recent__text">
+                      Молочный улун (Тайвань)
+                    </h4>
+                  </li>
+                  <li class="category-recent__item">
+                    <a href="/product/persikovyj-ulun-tajvani" class="category-recent__link">
+                      <img src="/content-images/persikovyj-ulun-tajvani.jpg" alt="">
+                    </a>
+                    <h4 class="category-recent__text">
+                      Персиковый улун (Тайвань)
+                    </h4>
+                  </li>
+                  <li class="category-recent__item">
+                    <a href="/product/ulun-tropicheskij" class="category-recent__link">
+                      <img src="/content-images/ulun-tropicheskij.jpg" alt="">
+                    </a>
+                    <h4 class="category-recent__text">
+                      Улун тропический
+                    </h4>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div class="overlay"></div>
+</body>
+
+</html>

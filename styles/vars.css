@@ -1,0 +1,11 @@
+:root {
+    --font-base: Open Sans, sans-serif, -apple-system;
+    --text: hsl(0, 0%, 27%);
+    --text-h: #08060d;
+    --background: #f6f7f8;
+    --border: solid 1px #efefef;
+    --hover: #998731;
+    --color-bg: #f7f8f6;
+    --color-text-muted: #6c757d;
+    --color-border: #e6e9e3;
+}
